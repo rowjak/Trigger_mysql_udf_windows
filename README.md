@@ -29,6 +29,6 @@ menampilkan versi windows di layar
 
 > SELECT sys_eval('ver');
 
-akses php dengan curl
+akses php dengan curl -silent
 
-> select sys_exec('');
+> select sys_exec('curl --silent --output /dev/null http://www.keycdn.com/');
