@@ -3,32 +3,32 @@ Tutorial untuk trigger mysql dengan sys_exec &amp; sys_val pada Windows
 
 Login to mysql
 
-> check OS and version
+check OS and version
 
-select @@version_compile_os, @@version_compile_machine;
+> select @@version_compile_os, @@version_compile_machine;
 
-> check plugin direcatory, bisa d ganti di file my.ini;
+check plugin direcatory, bisa d ganti di file my.ini;
 
-select @@plugin_dir;
+> select @@plugin_dir;
 
-> download lib_mysqludf_sys
+download lib_mysqludf_sys
 
-> extensi .dll untuk windows dan .so untuk mac/linux
+extensi .dll untuk windows dan .so untuk mac/linux
 
 https://github.com/rapid7/metasploit-framework/tree/master/data/exploits/mysql atau clone repo ini
 
-> buat function untuk akses system
+buat function untuk akses system
 
-CREATE FUNCTION sys_exec RETURNS int SONAME 'lib_mysqludf_sys_32.dll';
+> CREATE FUNCTION sys_exec RETURNS int SONAME 'lib_mysqludf_sys_32.dll';
 
-CREATE FUNCTION sys_eval RETURNS string SONAME 'lib_mysqludf_sys_32.dll';
+> CREATE FUNCTION sys_eval RETURNS string SONAME 'lib_mysqludf_sys_32.dll';
 
-> test function
+test function
 
-> menampilkan versi windows di layar
+menampilkan versi windows di layar
 
-SELECT sys_eval('ver');
+> SELECT sys_eval('ver');
 
-> akses php dengan curl
+akses php dengan curl
 
-select sys_exec('');
+> select sys_exec('');
