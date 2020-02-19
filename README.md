@@ -32,3 +32,7 @@ menampilkan versi windows di layar
 akses php dengan curl -silent
 
 > select sys_exec('curl --silent --output /dev/null http://www.keycdn.com/');
+
+
+sumber : https://www.youtube.com/watch?v=MDSNx5SMu2o
+
